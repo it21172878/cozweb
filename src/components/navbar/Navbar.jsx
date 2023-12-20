@@ -1,8 +1,27 @@
 // import React from 'react'
-import { BiPhoneCall, BiSolidSun } from 'react-icons/bi';
+import { useEffect, useState } from 'react';
+import { BiPhoneCall, BiSolidMoon, BiSolidSun } from 'react-icons/bi';
 import { FaCaretDown } from 'react-icons/fa';
 
 const Navbar = () => {
+  // Dark theme
+  const [theme, setTheme] = useState(
+    localStorage.getItem('theme')
+      ? localStorage.getItem('theme')
+      : localStorage.getItem('light')
+  );
+  const element = document.documentElement;
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      element.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      element.classList.remove('dark');
+      localStorage.removeItem('theme');
+    }
+  }, [theme]);
+
   return (
     <header className=" bg-navbar text-white border-b-[1px] border-primary/50">
       <nav className="container flex items-center justify-between h-[70px] py-2">
@@ -117,7 +136,17 @@ const Navbar = () => {
               </div>
             </li>
             {/* Light and dark mode switcher */}
-            <BiSolidSun className=" text-2xl" />
+            {theme === 'dark' ? (
+              <BiSolidSun
+                className=" text-2xl"
+                onClick={() => setTheme('light')}
+              />
+            ) : (
+              <BiSolidMoon
+                className=" text-2xl"
+                onClick={() => setTheme('dark')}
+              />
+            )}
           </ul>
         </div>
         {/* Mobile menu section */}
