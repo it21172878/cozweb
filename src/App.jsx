@@ -2,7 +2,7 @@
 
 import BannerDetails from './components/bannerDetails/BannerDetails';
 import Hero from './components/hero/Hero';
-import Navbar from './components/navbar/navbar';
+import Navbar from './components/navbar/Navbar';
 import OverviewCounter from './components/overview-counter/OverviewCounter';
 import Blog2 from './assets/blog2.jpg';
 import Blog1 from './assets/blog1.jpg';
