@@ -24,7 +24,7 @@ const Hero = () => {
           </div>
           {/* hero image container */}
           <div className=" mx-auto max-w-xs p-4">
-            <img src={HeroImg} alt="Not Found" className="" />
+            <img src={HeroImg} alt="Not Found" />
           </div>
         </div>
       </section>

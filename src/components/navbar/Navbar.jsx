@@ -33,8 +33,8 @@ const Navbar = () => {
 
   return (
     <>
-      <header className=" relative z-[99] bg-navbar text-white border-b-[1px] border-primary/50">
-        <nav className="container flex items-center justify-between h-[70px] py-2">
+      <header className=" fixed top-0 left-0 right-0 z-[99] bg-navbar text-white border-b-[1px] border-primary/50">
+        <nav className="container flex items-center justify-between h-[70px] py-2 px-2">
           {/* Logo section */}
           <div className=" text-2xl md:text-3xl text-white">
             <a href="#">
