@@ -8,6 +8,7 @@ import Blog2 from './assets/blog2.jpg';
 import Blog1 from './assets/blog1.jpg';
 import SimpleBanner from './components/simpleBanner/SimpleBanner';
 import Blogs from './components/blogs/Blogs';
+import Footer from './components/footer/Footer';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <BannerDetails reverse={true} img={Blog2} />
       <SimpleBanner />
       <Blogs />
+      <Footer />
     </>
   );
 };
