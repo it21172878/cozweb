@@ -8,6 +8,9 @@ const BannerDetails = ({ reverse, img }) => {
         <div className=" grid grid-cols-1 items-center gap-4 md:grid-cols-2">
           {/* text container */}
           <div
+            data-aos="fade-right"
+            data-aos-duration="400"
+            data-aos-once="true"
             className={`flex flex-col items-start gap-4 text-left md:items-start md:p-8 md:text-left ${
               reverse ? 'md:order-last' : ''
             }`}
@@ -37,7 +40,12 @@ const BannerDetails = ({ reverse, img }) => {
             <button className=" btn-primary">Get Started</button>
           </div>
           {/* image container */}
-          <div className={reverse ? 'order-1' : ' '}>
+          <div
+            data-aos="fade-left"
+            data-aos-duration="400"
+            data-aos-once="true"
+            className={reverse ? 'order-1' : ' '}
+          >
             <img src={img} alt="bot found" className=" max-auto w-full p-4 " />
           </div>
         </div>

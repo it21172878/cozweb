@@ -9,19 +9,32 @@ import Blog1 from './assets/blog1.jpg';
 import SimpleBanner from './components/simpleBanner/SimpleBanner';
 import Blogs from './components/blogs/Blogs';
 import Footer from './components/footer/Footer';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const App = () => {
+  useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 500,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+    AOS.refresh();
+  }, []);
+
   return (
-    <>
+    <div className=" dark:bg-slate-900 bg-white">
       <Navbar />
       <Hero />
       <OverviewCounter />
-      <BannerDetails img={Blog1} />
-      <BannerDetails reverse={true} img={Blog2} />
+      <BannerDetails reverse={true} img={Blog1} />
+      <BannerDetails img={Blog2} />
       <SimpleBanner />
       <Blogs />
       <Footer />
-    </>
+    </div>
   );
 };
 
